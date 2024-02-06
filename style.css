@@ -10,6 +10,7 @@
         --myBackgroundColor: linear-gradient(117deg, #121215 0%, #262629 100%);
         --myFontColor: #FFF;
         --myMenuFontColor: rgba(255, 255, 255, 0.75);
+        --myReversColor: #121215;
     }
 }
 @media (prefers-color-scheme: light){
@@ -17,6 +18,7 @@
         --myBackgroundColor: linear-gradient(117deg, #EEEEF0 0%, #CCCCD8 100%);
         --myFontColor: #121215;
         --myMenuFontColor: #121215;
+        --myReversColor: #FFF;
 
     }
 }
@@ -70,7 +72,7 @@ a:hover{
 }
 header{
     height: 80px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0px 32px;
@@ -133,4 +135,50 @@ header a{
     color: #7000A0;
     text-shadow: 0 0 5px #A0009B,
                  0 0 15px #A0009B;
+}
+#theyTold{
+    width: 100%;
+    background: var(--myFontColor);
+    color: var(--myReversColor);
+    display: inline-flex;
+    padding: 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+h2{
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+}
+#theySaid{
+    width: 100%;
+    height: 436px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 73px;
+    align-self: stretch;
+}
+.saidCard{
+    width: 378px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+.saidText{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+}
+.signature{
+    width: 100%;
+    color: #7000A0;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: end;
 }
