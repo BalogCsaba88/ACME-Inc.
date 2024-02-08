@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
     margin: 0;
@@ -12,6 +12,8 @@
         --myMenuFontColor: rgba(255, 255, 255, 0.75);
         --myReversColor: #121215;
         --myReversFontColor: #000;
+        --myTextShadowColor: none;
+        --mySignatureColor: #7000A0;
     }
 }
 @media (prefers-color-scheme: light){
@@ -21,9 +23,14 @@
         --myMenuFontColor: #121215;
         --myReversColor: #FFF;
         --myReversFontColor: #FFF;
-
+        --myTextShadowColor: #FFF;
+        --mySignatureColor: #D166FF;
+    }
+    svg{
+        filter: invert(100%);
     }
 }
+
 body{
     background: var(--myBackgroundColor);
     max-width: 100vw;
@@ -79,7 +86,7 @@ header{
     justify-content: space-between;
     padding: 0px 32px;
     align-items: center;
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid var(--myFontColor);
 }
 .menuLogo{
     font-size: 40px;
@@ -121,14 +128,19 @@ header a{
 #cegInfoContainer h1{
     font-size: 120px;
     font-weight: 400;
+    text-shadow: 0 0 15px var(--myTextShadowColor);
     align-self: center;
-    right: 189px;
+    padding-left: 444px;
     position: absolute;
 }
 #cegInfoContainer a{
     position: absolute;
     align-self: self-end;
     right: 80px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration-line: underline;
 }
 #cegInfoContainer a:visited{
     color: var(--myFontColor);
@@ -163,13 +175,18 @@ h2{
     align-self: stretch;
 }
 .saidCard{
-    width: 378px;
-    height: 100%;
+    width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
+}
+.saidCard img{
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 .saidText{
     font-size: 30px;
@@ -178,26 +195,27 @@ h2{
 }
 .signature{
     width: 100%;
-    color: #7000A0;
+    color: var(--mySignatureColor);
     font-size: 24px;
     font-weight: 400;
     text-align: end;
+    margin-top: 24px;
 }
 #introduction{
-    width: 100%;
-    padding: 89px 107px;
+    width: 1226px;
+    margin: 0px 107px;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
 }
 .introductionText{
     width: 100%;
+    margin-bottom: 89px;
 }
 .introductionText p{
     font-size: 24px;
     font-weight: 400;
-    white-space: pre-line;
+    margin-bottom: 24px;
 }
 footer{
     width: 100%;
@@ -261,15 +279,17 @@ h3{
 #connectionContainer{
     display: flex;
     gap: 80px;
-    padding: 0 80px 80px 80px;
+    padding: 0 80px 100px 80px;
 }
 #conectionText{
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
+    padding-right: 24px;
 }
 #conectionText a{
     text-decoration: underline;
+    width: 702px;
 }
 .extraMargin{
     margin: 24px 0px;
@@ -281,16 +301,55 @@ h3{
     background: var(--myFontColor);
     color: var(--myReversFontColor);
     width: 100%;
-    padding: 80px;
+    padding: 50px 80px;
 }
 form{
     width: 100%;
 }
+#personalDatas{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
 .inputBox{
     width: 360px;
 }
+label{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    padding-bottom: 15px;
+}
+input{
+    width: 360px;
+    height: 50px;
+    border: none;
+    border-bottom: 4px solid #A0009B;
+    background: #888;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 12px;
+    margin-bottom: 26px;
+}
 .masageBox{
     width: 100%;
+}
+textarea{
+    width: 100%;
+    height: 143px;
+    border-bottom: 4px solid #A0009B;
+    background: #888;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 12px;
+    margin-bottom: 45px;
+}
+#formButton{
+    display: flex;
+    justify-content: end;
 }
 button{
     display: flex;
@@ -303,4 +362,15 @@ button{
     color: #FFF;
     font-size: 24px;
     font-weight: 700;
-}   
+    border: none;
+}
+button:hover{
+    text-shadow: 0 0 10px yellow,
+                 0 0 30px yellow;
+}
+
+@media screen and (max-width: 375px){
+    #mainPageContainer{
+        flex-direction: column;
+    }
+}
