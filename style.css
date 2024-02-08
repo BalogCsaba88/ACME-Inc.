@@ -92,6 +92,9 @@ header{
     font-size: 40px;
     font-weight: 100;
 }
+.altLogo{
+    display: none;
+}
 header ul{
     display: flex;
     justify-content: center;
@@ -263,7 +266,6 @@ h3{
     align-items: center;
     gap: 32px;
     width: 379px;
-    border-radius: 20px;
 }
 .serviceText{
     font-size: 24px;
@@ -289,7 +291,6 @@ h3{
 }
 #conectionText a{
     text-decoration: underline;
-    width: 702px;
 }
 .extraMargin{
     margin: 24px 0px;
@@ -394,5 +395,174 @@ button:hover{
         line-height: 55px;
         text-align: center;
 
+    }
+    header{
+        height: 116px;
+        padding: 8px 24px;
+        align-items: center;
+    }
+    .menuLogo{
+        font-size: 32px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        display: none;
+    }
+    .altLogo{
+        display: flex;
+    }
+    header ul{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 0;
+    }
+    header a{
+        font-weight: 100;
+        color: var(--myFontColor);
+    }
+    #cegInfoSlogen{
+        padding: 0px;
+    }
+    #laptop{
+        width: 375px;
+    }
+    #laptop img{
+        width: 100%;
+    }
+    .activeSite{
+        font-weight: 100;
+    }
+    #cegInfoContainer{
+        height: 281px;
+        width: 100%;
+        display: flex;
+    }
+    #cegInfoContainer h1{
+        font-size: 50px;
+        text-shadow: 0 0 10px var(--myTextShadowColor);
+        align-self: center;
+        padding: 32px 36px 129px 36px;
+        text-align: center;
+    }
+    #cegInfoContainer a{
+        display: none;
+    }
+    #theyTold{
+        width: 100%;
+        display: inline-flex;
+        padding-bottom: 80px;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2{
+        margin: 32px;
+    }
+    #theySaid{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 64px;
+    }
+    .saidCard{
+        width: 100%;
+        padding: 0 32px;
+        display: flex;
+        flex-direction: column;
+    }
+    .saidText{
+        font-size: 24px;
+    }
+    #introduction{
+        width: 100%;
+        margin: 0;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .introductionText{
+        width: 100%;
+        margin-bottom: 32px;
+        padding: 0px 32px 12px 32px;
+    }
+    .introductionText p{
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+    footer p{
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 50px;
+        margin: 77px auto 76px 56px;
+    }
+    #ourServices h2{
+        display: none;
+    }
+    #services{
+        display: flex;
+        height: auto;
+        row-gap: 64px;
+        margin: 32px;
+    }
+    h3{
+        white-space: pre-line;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .serviceCard{
+        display: flex;
+        min-height: 380px;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        width: 100%;
+        padding: 3px;
+    }
+    #connectionContainer{
+        flex-direction: column;
+        gap: 64px;
+        width: 100%;
+        padding: 0 32px 32px 32px;
+    }
+    #conectionText{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #conectionText a{
+        width: auto;
+    }
+    .extraMargin{
+        margin: 24px 0px;
+    }
+    #conectionText ul{
+        padding-inline-start: 36px;
+    }
+    iframe{
+        width: 311px;
+        height: 400px;
+    }
+    #formContainer{
+        width: 100%;
+        padding: 32px;
+    }
+    #personalDatas{
+        flex-direction: column;
+    }
+    .inputBox{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    .masageBox{
+        width: 100%;
+    }
+    #formButton{
+        justify-content: center;
+    }
+    textarea{
+        margin-bottom: 32px;
     }
 }
