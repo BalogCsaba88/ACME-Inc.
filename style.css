@@ -70,12 +70,18 @@ body{
     padding-left: 50px;
     border-left-style: solid;
 }
+#mainPageMenu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 219px; 
+}
 #mainPageMenu li{
     font-size: 54px;
     font-style: normal;
     font-weight: 100;
     list-style-type: none;
-    line-height: 69px;
 }
 a{
     text-decoration: none;
@@ -214,15 +220,14 @@ h2{
     margin-top: 24px;
 }
 #introduction{
-    width: 1226px;
-    margin: 0px 107px;
+    width: 86%;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
 }
 .introductionText{
     width: 100%;
-    margin-bottom: 89px;
+    margin-bottom: 65px;
 }
 .introductionText p{
     font-size: 24px;
@@ -275,6 +280,10 @@ h3{
     align-items: center;
     gap: 32px;
     width: 379px;
+}
+.serviceCard:hover{
+    background: linear-gradient(#7000A0 0%, #A0009B 100%);
+    box-shadow: inset 0 0 20px var(--myReversColor);
 }
 .serviceText{
     font-size: 24px;
@@ -368,15 +377,25 @@ button{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(92deg, #7000A0 0%, #A0009B 100%);
+    /* background: linear-gradient(92deg, #7000A0 0%, #A0009B 100%); */
+    background: linear-gradient(92deg, #7000A0 0%, #A0009B 25%, #ffff00 50%, #A0009B 75%, #7000A0 100%);
+    background-size: 400%;
     color: #FFF;
     font-size: 24px;
     font-weight: 700;
     border: none;
 }
 button:hover{
-    text-shadow: 0 0 10px yellow,
-                 0 0 30px yellow;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 400%;
+    }
+    100%{
+        background-position: 0%;
+    }
 }
 
 @media screen and (max-width: 375px){
@@ -421,10 +440,11 @@ button:hover{
     }
     header ul{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-end;
         flex-direction: column;
-        gap: 0;
+        height: 100px;
+        gap: 0px;
     }
     header a{
         font-weight: 100;
@@ -491,7 +511,7 @@ button:hover{
     }
     .introductionText{
         width: 100%;
-        margin-bottom: 32px;
+        margin-bottom: 14px;
         padding: 0px 32px 12px 32px;
     }
     .introductionText p{
@@ -528,7 +548,9 @@ button:hover{
         align-items: center;
         gap: 32px;
         width: 100%;
-        padding: 3px;
+    }
+    .serviceText{
+        padding: 0 3px;
     }
     #connectionContainer{
         flex-direction: column;
@@ -575,5 +597,6 @@ button:hover{
     }
     textarea{
         margin-bottom: 32px;
+        border: solid 1px #A0009B;
     }
 }
