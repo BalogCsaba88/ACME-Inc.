@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 @media (prefers-color-scheme: dark){
     body{
         --myBackgroundColor: linear-gradient(117deg, #121215 0%, #262629 100%);
@@ -30,7 +25,11 @@
         filter: invert(100%);
     }
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background: var(--myBackgroundColor);
     width: 100%;
@@ -154,7 +153,7 @@ header a{
     font-weight: 400;
     text-shadow: 0 0 15px var(--myTextShadowColor);
     align-self: center;
-    padding-left: 444px;
+    padding-left: 31%;
     position: absolute;
 }
 #cegInfoContainer a{
@@ -242,8 +241,10 @@ h2{
 }
 footer{
     width: 100%;
-    flex-shrink: 0;
-    background: linear-gradient(90deg, #7000A0 0%, #A0009B 100%); 
+    background: linear-gradient(90deg, #7000A0 0%, #A0009B 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 footer p{
     color: #FFF;
@@ -253,7 +254,7 @@ footer p{
     margin: 75px 255px;
 }
 .footerLetterSpacing{
-    letter-spacing: 200px;
+    letter-spacing:  calc(100vw * 0.14);
 }
 
 /*---Szolgáltatások oldal---*/
@@ -267,14 +268,13 @@ footer p{
 }
 #services{
     display: flex;
-    height: 867px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     align-content: flex-start;
     row-gap: 50px;
     flex-shrink: 0;
     flex-wrap: wrap;
-    margin: 0 68px 92px 68px;
+    margin: 0 68px 69px 68px;
 }
 h3{
     white-space: pre-line;
@@ -413,10 +413,75 @@ button:hover{
         background-position: 0%;
     }
 }
+/*---1280px széles képernyő---*/
 
-/*---375px széles mobil nézet---*/
+@media screen and (max-width:1280px){
+    #cegInfoContainer h1{
+        font-size: 72px;
+    }
+    #theyTold{
+        padding: 0 24px 80px 24px;
+    }
+    .serviceCard{
+        width: 40%;
+    }
+}
 
-@media screen and (max-width: 375px){
+/*---1100px széles képernyő---*/
+
+@media screen and (max-width:1100px){
+    #theySaid{
+        height: auto;
+        flex-direction: column;
+    }
+    .saidCard{
+        width: 80%;
+        align-self: center;
+    }
+    .menuLogo{
+        font-size: 32px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        display: none;
+    }
+    .altLogo{
+        display: flex;
+    }
+    footer p{
+        font-size: 80px;
+    }
+    #connectionContainer{
+        flex-direction: column;
+        gap: 64px;
+        width: 100%;
+        padding: 0 32px 32px 32px;
+    }
+    #conectionText{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #conectionText a{
+        width: auto;
+    }
+    .extraMargin{
+        margin: 24px 0px;
+    }
+    #conectionText ul{
+        padding-inline-start: 36px;
+    }
+    iframe{
+        width: 100%;
+        height: 400px;
+    }
+}
+
+/*---1000px széles képernyő---*/
+
+@media screen and (max-width:1000px){
+    #cegInfoContainer a{
+        display: none;
+    }
     #mainPageContainer{
         flex-direction: column;
     }
@@ -433,28 +498,39 @@ button:hover{
         border-top: solid 1px;
         padding: 50px 0 0 0;
     }
+    #mainPageMenu ul{
+        align-items: center;
+    }
     #mainPageMenu li{
         font-size: 40px;
         font-weight: 100;
         list-style-type: none;
-        margin-bottom: 32px;
-        line-height: 55px;
         text-align: center;
+    }
+}
 
+/*---800px széles képernyő--*/
+
+@media screen and (max-width:800px){
+    #laptop{
+        width: 90%;
+        min-width: 375px;
+        position: relative;
+        height: auto;
+    }
+    #laptop img{
+        width: 100%;
+    }
+    #cegInfoContainer h1{
+        font-size: 62px;
+    }
+    #cegInfoSlogen{
+        padding: 32px;
     }
     header{
         height: 116px;
         padding: 8px 24px;
         align-items: center;
-    }
-    .menuLogo{
-        font-size: 32px;
-        font-weight: 900;
-        letter-spacing: 2px;
-        display: none;
-    }
-    .altLogo{
-        display: flex;
     }
     header ul{
         display: flex;
@@ -468,22 +544,14 @@ button:hover{
         font-weight: 100;
         color: var(--myFontColor);
     }
-    #cegInfoSlogen{
-        padding: 0px;
-    }
-    #laptop{
-        width: 375px;
-    }
-    #laptop img{
-        width: 100%;
-    }
-    .activeSite{
-        font-weight: 100;
-    }
+}
+
+/*---640széles képernyő---*/
+
+@media screen and (max-width: 640px){
     #cegInfoContainer{
         height: 281px;
         width: 100%;
-        display: flex;
     }
     #cegInfoContainer h1{
         font-size: 50px;
@@ -492,8 +560,47 @@ button:hover{
         padding: 32px 36px 129px 36px;
         text-align: center;
     }
-    #cegInfoContainer a{
-        display: none;
+    #cegInfoSlogen{
+        padding: 12px 0;
+    }
+    #laptop{
+        width: 375px;
+    }
+    #laptop img{
+        width: 100%;
+    }
+    footer p{
+        font-size: 60px;
+    }
+    .serviceCard{
+        display: flex;
+        min-height: 380px;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/*---375px széles mobil nézet---*/
+
+@media screen and (max-width: 375px){
+    #cegInfoSlogen{
+        padding: 0px;
+    }
+    #cegInfoContainer{
+        justify-content: center;
+        align-items: center;
+    }
+    #cegInfoContainer h1{
+        font-size: 50px;
+        text-shadow: 0 0 10px var(--myTextShadowColor);
+        align-self: center;
+        text-align: center;
+    }
+    .activeSite{
+        font-weight: 100;
     }
     #theyTold{
         width: 100%;
@@ -559,40 +666,11 @@ button:hover{
         font-size: 24px;
         font-weight: 700;
     }
-    .serviceCard{
-        display: flex;
-        min-height: 380px;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        width: 100%;
-    }
     .serviceText{
         padding: 0 3px;
     }
-    #connectionContainer{
-        flex-direction: column;
-        gap: 64px;
-        width: 100%;
-        padding: 0 32px 32px 32px;
-    }
-    #conectionText{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    #conectionText a{
-        width: auto;
-    }
-    .extraMargin{
-        margin: 24px 0px;
-    }
-    #conectionText ul{
-        padding-inline-start: 36px;
-    }
     iframe{
         width: 311px;
-        height: 400px;
     }
     #formContainer{
         width: 100%;
