@@ -21,7 +21,7 @@
         --myTextShadowColor: #FFF;
         --mySignatureColor: #D166FF;
     }
-    svg{
+    .svgContainer{
         filter: invert(100%);
     }
 }
@@ -298,6 +298,34 @@ h3{
                       0 0 20px var(--mySignatureColor),
                       0 0 50px var(--mySignatureColor);
 }
+.svgContainer{
+    display: flex;
+    height: 64px;
+}
+#svg1{
+    background: url(./svg/1.svg);
+    width: 124px;
+}
+#svg2{
+    background: url(./svg/2.svg);
+    width: 58px;
+}
+#svg3{
+    background: url(./svg/3.svg);
+    width: 84px;
+}
+#svg4{
+    background: url(./svg/4.svg);
+    width: 56px;
+}
+#svg5{
+    background: url(./svg/5.svg);
+    width: 66px;
+}
+#svg6{
+    background: url(./svg/6.svg);
+    width: 55px;
+}
 .serviceText{
     font-size: 24px;
     font-weight: 400;
@@ -393,7 +421,6 @@ button{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* background: linear-gradient(92deg, #7000A0 0%, #A0009B 100%); */
     background: linear-gradient(92deg, #7000A0 0%, #A0009B 25%, #ffff00 50%, #A0009B 75%, #7000A0 100%);
     background-size: 400%;
     color: #FFF;
