@@ -141,6 +141,9 @@ header a{
     height: 471px;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 65px;
 }
 #laptop{
     width: 628px;
@@ -152,18 +155,16 @@ header a{
     font-size: 120px;
     font-weight: 400;
     text-shadow: 0 0 15px var(--myTextShadowColor);
-    align-self: center;
-    padding-left: 31%;
-    position: absolute;
+    width: 727px;
+    align-self: flex-end;
+    margin-right: 89px;
 }
 #cegInfoContainer a{
-    position: absolute;
-    align-self: self-end;
-    right: 80px;
     font-family: Roboto;
     font-size: 24px;
     font-weight: 400;
     text-decoration-line: underline;
+    align-self: self-end;
 }
 #cegInfoContainer a:visited{
     color: var(--myFontColor);
@@ -443,8 +444,13 @@ button:hover{
 /*---1280px széles képernyő---*/
 
 @media screen and (max-width:1280px){
+    #cegInfoContainer{
+        justify-content: space-between;
+    }
     #cegInfoContainer h1{
         font-size: 72px;
+        margin: 0;
+        align-self: center;
     }
     #theyTold{
         padding: 0 24px 80px 24px;
@@ -562,17 +568,20 @@ button:hover{
     #laptop{
         width: 90%;
         min-width: 375px;
-        position: relative;
         height: auto;
     }
     #laptop img{
         width: 100%;
     }
+    #cegInfoContainer{
+        align-items: center;
+    }
     #cegInfoContainer h1{
         font-size: 62px;
+        text-align: center;
     }
     #cegInfoSlogen{
-        padding: 32px;
+        padding: 0px;
     }
     header{
         height: 116px;
@@ -601,10 +610,11 @@ button:hover{
         width: 100%;
     }
     #cegInfoContainer h1{
+        width: 303px;
+        height: 120px;
         font-size: 50px;
         text-shadow: 0 0 10px var(--myTextShadowColor);
         align-self: center;
-        padding: 32px 36px 129px 36px;
         text-align: center;
     }
     #cegInfoSlogen{
@@ -640,7 +650,7 @@ button:hover{
         padding: 0px;
     }
     #cegInfoContainer{
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
     #cegInfoContainer h1{
@@ -648,6 +658,7 @@ button:hover{
         text-shadow: 0 0 10px var(--myTextShadowColor);
         align-self: center;
         text-align: center;
+        margin-top: 32px;
     }
     .activeSite{
         font-weight: 100;
