@@ -425,6 +425,13 @@ button:hover{
     .serviceCard{
         width: 40%;
     }
+    .inputBox{
+        width: 30%;
+    }
+    input{
+        width: 100%;
+        font-size: 20px;
+    }
 }
 
 /*---1100px széles képernyő---*/
@@ -507,6 +514,19 @@ button:hover{
         list-style-type: none;
         text-align: center;
     }
+    #personalDatas{
+        flex-direction: column;
+    }
+    .inputBox{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+        font-size: 24px;
+    }
+    .masageBox{
+        width: 100%;
+    }
 }
 
 /*---800px széles képernyő--*/
@@ -580,6 +600,9 @@ button:hover{
         gap: 32px;
         width: 100%;
         padding: 0;
+    }
+    input{
+        font-size: 20px;
     }
 }
 
@@ -675,18 +698,6 @@ button:hover{
     #formContainer{
         width: 100%;
         padding: 32px;
-    }
-    #personalDatas{
-        flex-direction: column;
-    }
-    .inputBox{
-        width: 100%;
-    }
-    input{
-        width: 100%;
-    }
-    .masageBox{
-        width: 100%;
     }
     #formButton{
         justify-content: center;
